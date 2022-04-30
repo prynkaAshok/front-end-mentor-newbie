@@ -36,7 +36,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 # Getting Started with CSS
 ## CSS GRIDS
 
-### `Grid Container` 
+`Grid Container` 
 Create a grid container by setting the display property with a value of `grid` or `inline-grid`. 
 All direct children of grid containers become grid items.
 
@@ -55,10 +55,9 @@ Creats a column track for grids
 `grid-template-columns: 1fr 1fr 2fr`
 The `fr` unit helps create flexible grid tracks. It represents a fraction of the available space in the grid container
 
-`Minimum and Maximum Grid Track Sizes`
-minmax(minimunSize, maximunSize)
+`minmax(minimunSize, maximunSize)` Minimum and Maximum Grid Track Sizes
 
-`Repeating Grid Tracks`
+Repeating Grid Tracks
 This is useful for grids with items with equal sizes or many items.
 `grid-template-rows`:    repeat(4, 100px); 
 `grid-template-columns`: repeat(3, 1fr);
@@ -66,10 +65,12 @@ This is useful for grids with items with equal sizes or many items.
 repeat(number of items, track size)
 
 Gutters/Gap
+
 The `grid-column-gap` and `grid-row-gap` properties create gutters between columns and rows.
 Are created only between and not at the edges
 grid-row-gap:    20px;
 grid-column-gap: 5rem;
+
 SHORTHAND : `grid-gap : grid-row-gap grid-column-gap`
             grid-gap: 20px (Sets 20px for both column + row)
 
@@ -80,27 +81,22 @@ Positioning Items by Grid Line Numbers
 `grid-column-end`:2
 
 `grid-row` :   grid-row-start & grid-row-end
+
 `grid-column` : grid-column-start & grid-column-end
+
 `grid-area` is shorthand for grid-row-start, grid-column-start, grid-row-end and grid-column-end.
+
 grid-area: 2 / 2 / 3 / 3
-grid-area : grid-row-start/grid-column-start/grid-row-end/grid-column-end
+
+`grid-area` : grid-row-start/grid-column-start/grid-row-end/grid-column-end
 
 `grid-auto-flow: row`
+
 `grid-auto-flow: column`
 
 `justify-items` and `justify-self` --> align items along the row axis, and 
 `align-items` `and align-self` --> align items along the column axis.
 justify-items and align-items are applied to the grid container and support the following values:
-
-auto
-normal
-start
-end
-center
-stretch
-baseline
-first baseline
-last baseline
 
 
 

@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+<!-- # Getting Started with CSS
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -31,40 +31,82 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Note: this is a one-way operation. Once you `eject`, you can't go back!** -->
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Getting Started with CSS
+## CSS GRIDS
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### `Grid Container` 
+Create a grid container by setting the display property with a value of `grid` or `inline-grid`. 
+All direct children of grid containers become grid items.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+`display : grid `
+They are placed in rows by default and span the full width of a container : Block Level
 
-## Learn More
+`display: inline-grid`
+Does not span the full width : inline
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+`grid-template-rows: 50px 100px`
+Creats a row track for grids
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+`grid-template-column: 50px 100px`
+Creats a column track for grids
 
-### Code Splitting
+`grid-template-columns: 1fr 1fr 2fr`
+The `fr` unit helps create flexible grid tracks. It represents a fraction of the available space in the grid container
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+`Minimum and Maximum Grid Track Sizes`
+minmax(minimunSize, maximunSize)
 
-### Analyzing the Bundle Size
+`Repeating Grid Tracks`
+This is useful for grids with items with equal sizes or many items.
+`grid-template-rows`:    repeat(4, 100px); 
+`grid-template-columns`: repeat(3, 1fr);
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+repeat(number of items, track size)
 
-### Making a Progressive Web App
+Gutters/Gap
+The `grid-column-gap` and `grid-row-gap` properties create gutters between columns and rows.
+Are created only between and not at the edges
+grid-row-gap:    20px;
+grid-column-gap: 5rem;
+SHORTHAND : `grid-gap : grid-row-gap grid-column-gap`
+            grid-gap: 20px (Sets 20px for both column + row)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Positioning Items by Grid Line Numbers
+`grid-row-start` : 2
+`grid-row-end` :3
+`grid-column-start` : 1
+`grid-column-end`:2
 
-### Advanced Configuration
+`grid-row` :   grid-row-start & grid-row-end
+`grid-column` : grid-column-start & grid-column-end
+`grid-area` is shorthand for grid-row-start, grid-column-start, grid-row-end and grid-column-end.
+grid-area: 2 / 2 / 3 / 3
+grid-area : grid-row-start/grid-column-start/grid-row-end/grid-column-end
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+`grid-auto-flow: row`
+`grid-auto-flow: column`
 
-### Deployment
+`justify-items` and `justify-self` --> align items along the row axis, and 
+`align-items` `and align-self` --> align items along the column axis.
+justify-items and align-items are applied to the grid container and support the following values:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+auto
+normal
+start
+end
+center
+stretch
+baseline
+first baseline
+last baseline
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+ 
+
+
+
+
+
